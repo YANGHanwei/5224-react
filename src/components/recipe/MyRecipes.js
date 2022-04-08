@@ -5,6 +5,7 @@ import RecipeCard from "./RecipeCard";
 import { getUserRecipes } from "../../redux/actions/user";
 
 export default function MyRecipes() {
+   
   const dispatch = useDispatch();
 
   const { user, userRecipes } = useSelector((state) => state.user);
@@ -30,6 +31,8 @@ export default function MyRecipes() {
             My Recipes
           </h2>
           <RecipeCard recipes={userRecipes} quickview={false} />
+          {/* 从这开始修改*/}
+          
         </div>
       </div>
     </>

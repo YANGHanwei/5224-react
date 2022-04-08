@@ -14,10 +14,10 @@ import { MailIcon } from "@heroicons/react/solid";
 
 const navigation = [
   { name: "Profile", icon: UserIcon, to: "profile", current: true },
-  { name: "My Recipes", icon: MenuIcon, to: "myRecipes", current: false },
+  { name: "News", icon: MenuIcon, to: "myRecipes", current: false },
   {
-    name: "Saved Recipes",
-    icon: BookmarkIcon,
+    name: "NLP tasks",
+    icon: MenuIcon,
     to: "savedRecipes",
     current: false,
   },

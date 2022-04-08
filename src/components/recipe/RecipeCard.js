@@ -9,47 +9,119 @@ import QuickView from "./QuickView";
 export default function RecipeCard({ recipes, quickview }) {
   const [open, setOpen] = useState(false);
   const [id, setId] = useState(null);
-
+  const test = [
+    {
+      "id": 0,
+      "category": {
+        "id": 0,
+        "name": "string"
+      },
+      "category_name": "string",
+      "picture": "string",
+      "title": "string",
+      "desc": "string",
+      "cook_time": "string",
+      "ingredients": "string",
+      "procedure": "string",
+      "author": 0,
+      "username": "string",
+      "total_number_of_likes": "string",
+      "total_number_of_bookmarks": "string"
+    },
+    {
+      "id": 0,
+      "category": {
+        "id": 0,
+        "name": "string"
+      },
+      "category_name": "string",
+      "picture": "string",
+      "title": "string",
+      "desc": "string",
+      "cook_time": "string",
+      "ingredients": "string",
+      "procedure": "string",
+      "author": 0,
+      "username": "string",
+      "total_number_of_likes": "string",
+      "total_number_of_bookmarks": "string"
+    }
+  ]
   const dispatch = useDispatch();
 
   return (
     <>
-      <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {recipes.map((recipe) => (
+      <div className="mt-2 grid grid-cols-1 gap-50 sm:grid-cols-2 lg:grid-cols-1">
+        {test.map((test) => (
           <div
-            key={recipe.title}
+            key={test.title}
             className="bg-white overflow-hidden shadow rounded-lg"
-          >
+          >      
             <div className="p-5">
               <div className="flex items-center">
                 <div className="w-0 flex-1">
                   <dl>
                     <dt>
-                      <div>
-                        <img
-                          src={recipe.picture}
-                          className="object-cover w-full h-48"
-                          alt=""
-                        />
-                      </div>
+                      {/* <div>
+                        <li>
+                          <img
+                            src= "https://lambda0732685.s3.amazonaws.com/building_hot_trend.png"
+                            // url = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fqph.cf2.quoracdn.net%2Fmain-qimg-14d043dc9c5115ecc90bfc084bb69ed9-lq&imgrefurl=https%3A%2F%2Fwww.quora.com%2FWhat-is-transportation&tbnid=i35f68HRZmFyJM&vet=12ahUKEwj_tNOys__2AhWjzYsBHdnwCE4QMygSegUIARDjAQ..i&docid=Q-v6jdmuoS3A5M&w=602&h=301&q=transportation&ved=2ahUKEwj_tNOys__2AhWjzYsBHdnwCE4QMygSegUIARDjAQ"
+                            className="w-100 h-60"
+                            alt=""
+                          />
+                        </li>
+                      </div> */}
                     </dt>
                     <div className="mt-4 flex justify-between md:mt-2">
-                      <dt className="text-lg font-medium text-gray-500 truncate">
-                        {recipe.title}
+                      <dt className="text-lg font-medium text-gray-1000 truncate">
+                        Field
                       </dt>
-                      <dt className="text-xs font-light border border-gray-200 p-1 rounded-lg text-gray-500 truncate">
+                      <dt className="text-lg font-medium text-gray-1000 truncate">
+                        Transportation
+                      </dt>
+                      {/* <dt className="text-xs font-light border border-gray-200 p-1 rounded-lg text-gray-500 truncate">
                         by {recipe.username}
+                      </dt> */}
+                    </div>
+                    <div className="mt-4 flex justify-between md:mt-2">
+                      <dt className="text-lg font-medium text-gray-500 truncate">
+                        Negative Count
+                      </dt>
+                      <dt className="text-lg font-medium text-gray-500 truncate">
+                        800
+                      </dt>
+                      {/* <dt className="text-xs font-light border border-gray-200 p-1 rounded-lg text-gray-500 truncate">
+                        by {recipe.username}
+                      </dt> */}
+                    </div>
+                    <div className="mt-4 flex justify-between md:mt-2">
+                      <dt className="text-lg font-medium text-gray-500 truncate">
+                        Positive Count
+                      </dt>
+                      <dt className="text-lg font-medium text-gray-500 truncate">
+                        1000
                       </dt>
                     </div>
-                    <dd>
+                    <div>
+                      <li> Trend Graph
+                        <img
+                          src= "https://lambda0732685.s3.amazonaws.com/building_hot_trend.png"
+                            // url = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fqph.cf2.quoracdn.net%2Fmain-qimg-14d043dc9c5115ecc90bfc084bb69ed9-lq&imgrefurl=https%3A%2F%2Fwww.quora.com%2FWhat-is-transportation&tbnid=i35f68HRZmFyJM&vet=12ahUKEwj_tNOys__2AhWjzYsBHdnwCE4QMygSegUIARDjAQ..i&docid=Q-v6jdmuoS3A5M&w=602&h=301&q=transportation&ved=2ahUKEwj_tNOys__2AhWjzYsBHdnwCE4QMygSegUIARDjAQ"
+                          className="w-100 h-60"
+                          alt=""
+                        />
+                      </li>
+                    </div>
+                    {/* <dd>
                       <div className="text-sm text-gray-900">{recipe.desc}</div>
-                    </dd>
+                    </dd> */}
                   </dl>
                 </div>
               </div>
             </div>
             <div className="flex justify-between bg-gray-50 px-5 py-3">
-              <div className="text-sm">
+              {/* <div className="text-sm">
                 {quickview ? (
                   <button
                     className="font-medium text-teal-700 hover:text-teal-900"
@@ -68,7 +140,7 @@ export default function RecipeCard({ recipes, quickview }) {
                     View detail
                   </Link>
                 )}
-              </div>
+              </div> */}
 
               <div className="flex space-x-2">
                 <button type="button">
@@ -87,7 +159,7 @@ export default function RecipeCard({ recipes, quickview }) {
                     className="h-6 w-6 text-gray-400"
                     aria-hidden="true"
                     onClick={() => {
-                      dispatch(saveRecipe(recipe.author, id));
+                      dispatch(saveRecipe(test.author, id));
                     }}
                   />
                 </button>

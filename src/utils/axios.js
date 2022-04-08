@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const baseURL = "https://recipe-backend-api.herokuapp.com/api";
+// const baseURL = "https://recipe-backend-api.herokuapp.com/api";
+const baseURL = "http://recipe-api-master-test1-dev.us-east-1.elasticbeanstalk.com/api"
 
 const axiosInstance = axios.create({
   baseURL: baseURL,
